@@ -1,0 +1,11 @@
+version: "2.3"
+services:
+  tfp:
+    # replace username/repo:tag with your name and image details
+    image: tfp
+    runtime: nvidia
+    environment:
+        - NVIDIA_VISIBLE_DEVICES=1
+    volumes:
+        - ./home:/home/docker
+        - ../models:/home/docker/models

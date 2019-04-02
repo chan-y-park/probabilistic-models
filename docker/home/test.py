@@ -1,0 +1,20 @@
+import tensorflow as tf
+
+
+def test():
+    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+    b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+    c = tf.matmul(a, b)
+    # Creates a session with log_device_placement set to True.
+    config = tf.ConfigProto(
+        allow_soft_placement=True,
+        log_device_placement=True,
+    )
+    sess = tf.Session()
+    # Runs the op.
+    print(sess.run(c))
+
+#with tf.device('/device:GPU:1'):
+#    test()
+
+test()
