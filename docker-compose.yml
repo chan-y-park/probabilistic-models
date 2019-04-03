@@ -7,5 +7,5 @@ services:
     environment:
         - NVIDIA_VISIBLE_DEVICES=1
     volumes:
-        - ./home:/home/docker
-        - ../models:/home/docker/models
+        - ./home-docker:/home/docker
+        - ./models:/home/docker/models
