@@ -17,5 +17,5 @@ $ NV_GPU=1 nvidia-docker run -ti tfp
 
 # Running docker-compose 
 ```
-$ docker-compose run tfp 
+$ docker-compose run --service-ports tfp 
 ```
