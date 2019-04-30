@@ -26,6 +26,8 @@ RUN mkdir pkg
 RUN ./bazel-bin/pip_pkg pkg 
 RUN pip install --upgrade pkg/*.whl
 
+RUN pip install jupyter_contrib_nbextensions 
+
 # Log in as user 'docker'.
 USER docker
 WORKDIR /home/docker

@@ -9,3 +9,5 @@ services:
     volumes:
         - ./home-docker:/home/docker
         - ./models:/home/docker/models
+    ports:
+        - "9999:9999"
