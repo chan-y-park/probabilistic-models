@@ -58,6 +58,30 @@ def get_config(args):
         default=timestamp,
         dest='model_name',
     )
+    parser.add_argument(
+        '--num-leapfrog-steps',
+        type=int,
+        default=3,
+        dest='num_leapfrog_steps',
+    )
+    parser.add_argument(
+        '--hmc-step-size',
+        type=float,
+        default=0.1,
+        dest='hmc_step_size',
+    )
+    parser.add_argument(
+        '--hmc-num-burnin-steps',
+        type=int,
+        default=1e2,
+        dest='hmc_num_burnin_steps',
+    )
+    parser.add_argument(
+        '--hmc-num-simulation-steps',
+        type=int,
+        default=1e3,
+        dest='hmc_num_simulation_steps',
+    )
 
     config = parser.parser_args(args)
 
